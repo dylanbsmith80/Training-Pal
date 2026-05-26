@@ -12,3 +12,7 @@ Before designing features, writing prompts, creating workout-program logic, or c
 - Protect client privacy.
 - Avoid unsafe programming.
 - Respect that the trainer makes final programming decisions.
+
+Use `program-pal-initial-assessment` when working from client intake forms, initial assessment notes, fitness test results, FMS/posture notes, SMART goals, or fitness-goal questionnaires.
+
+Use `personal-training-workbook-format` when creating or formatting final Excel workout-program workbooks.
