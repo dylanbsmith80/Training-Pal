@@ -15,6 +15,10 @@ Read these references when needed:
 
 - `references/verified-exercise-sources.md` for approved external exercise sources.
 - `references/exercise-entry-schema.md` for the structure Program Pal should use when describing or evaluating exercises.
+- `memory/private-exercise-history.md` when it exists locally, for private notes on exercises Program Pal has used before.
+- `memory/private-exercise-history.example.md` for the private exercise-history template.
+
+The real private exercise history file is intentionally gitignored. Do not commit client-specific exercise history, sensitive client context, or identifiable client notes to the public repository.
 
 ## Core Workflow
 
@@ -38,6 +42,7 @@ Prefer exercises that can be verified through:
 - NASM Exercise Library
 - NSCA exercise tutorials/videos
 - The trainer's own approved exercise library or notes
+- The local private exercise history when it contains a relevant successful prior use
 - Previously validated Program Pal references
 
 When using exercises from non-verified sources, apply extra caution.
@@ -52,6 +57,20 @@ For non-verified exercises:
 - Use the simplest effective option when possible.
 
 If a verified exercise can accomplish the same training purpose, prefer the verified option.
+
+## Private Exercise History
+
+Before selecting unfamiliar exercises, check `memory/private-exercise-history.md` if it exists. Use it to find exercises Program Pal has used successfully before, along with trainer notes about regressions, progressions, cautions, and client types.
+
+Use the private history as supporting context, not as automatic proof that an exercise is safe for a new client. Re-check the current client's assessment, goals, equipment, and safety constraints every time.
+
+When adding to private history:
+
+- Avoid real client names.
+- Avoid identifiable client details.
+- Use generic client descriptors such as "beginner lower-body strength client" or "client with limited equipment."
+- Record what worked, what to watch for, and how the exercise was progressed or regressed.
+- Keep sensitive health, injury, or medical details out unless the file is stored privately and the trainer explicitly wants those notes there.
 
 ## Selection Criteria
 
