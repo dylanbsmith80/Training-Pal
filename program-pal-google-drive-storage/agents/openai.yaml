@@ -1,0 +1,7 @@
+interface:
+  display_name: "Program Pal Google Drive Storage"
+  short_description: "Store client files in Google Drive"
+  default_prompt: "Use $program-pal-google-drive-storage to store this assessment or workout program in the client's Google Drive folder."
+
+policy:
+  allow_implicit_invocation: true

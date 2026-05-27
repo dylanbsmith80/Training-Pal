@@ -23,4 +23,4 @@ Use `program-pal-exercise-selection` when choosing, verifying, substituting, reg
 
 Use `personal-training-workbook-format` when creating or formatting final Excel workout-program workbooks.
 
-Use `program-pal-onedrive-storage` when storing assessment forms or finished workout programs in the trainer's local OneDrive Training Pal folder.
+Use `program-pal-google-drive-storage` when storing assessment forms or finished workout programs in the trainer's Google Drive `Program pal` folder.

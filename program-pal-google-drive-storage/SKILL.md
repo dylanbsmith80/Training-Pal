@@ -1,27 +1,29 @@
 ---
-name: program-pal-onedrive-storage
-description: Use when Program Pal needs to save, copy, organize, or locate client assessment forms and generated workout programs in the trainer's local OneDrive Training Pal folder using the required client-folder naming convention.
+name: program-pal-google-drive-storage
+description: Use when Program Pal needs to save, upload, organize, or locate client assessment forms and generated workout programs in the trainer's Google Drive folder named Program pal using the required client-folder naming convention.
 ---
 
-# Program Pal OneDrive Storage Skill
+# Program Pal Google Drive Storage Skill
 
-Use this skill when storing Program Pal client files in the trainer's local OneDrive-synced Training Pal folder.
+Use this skill when storing Program Pal client files in Google Drive.
 
 This skill governs file organization only. It does not generate assessments, design programs, select exercises, or format Excel workbooks.
 
 ## Storage Mechanism
 
-Use the local OneDrive sync folder on the Mac. Do not use Microsoft Graph, browser upload, or direct cloud API upload unless the trainer explicitly asks for that later.
+Use the configured Google Drive connector/plugin when available.
 
-Read the storage root from `config/storage-root.local.md` when it exists. That file is private and ignored by git.
+The target root folder in Google Drive is:
 
-If the local config is missing or the path is inaccessible, ask the trainer for the current OneDrive Training Pal folder path before storing files.
+`Program pal`
+
+If the Google Drive connector/plugin is unavailable, ask the trainer to enable or install Google Drive access before storing files. Do not silently switch to OneDrive, local Downloads, or another cloud folder.
+
+If multiple Google Drive folders named `Program pal` exist, ask the trainer which one to use before storing files.
 
 ## Folder Structure
 
-The root folder is the trainer's OneDrive `Training Pal` folder.
-
-Each client gets one folder named:
+Inside the Google Drive `Program pal` folder, each client gets one folder named:
 
 `FirstNameLastInitial`
 
@@ -81,28 +83,32 @@ If there are multiple programs for the same client, keep all of them in the `Pro
 
 When storing an assessment:
 
-1. Resolve the OneDrive Training Pal root folder.
+1. Find the Google Drive root folder named `Program pal`.
 2. Create the client folder if it does not exist.
 3. Create `Assessments/` and `Programs/` subfolders if they do not exist.
-4. Copy the assessment into `Assessments/`.
-5. Preserve the original assessment file unless the trainer explicitly asks to move it.
+4. Upload or copy the assessment into `Assessments/`.
+5. Preserve the original assessment file unless the trainer explicitly asks to move or delete it.
 
 When storing a generated workout workbook:
 
-1. Resolve the OneDrive Training Pal root folder.
+1. Find the Google Drive root folder named `Program pal`.
 2. Create the client folder if it does not exist.
 3. Create `Assessments/` and `Programs/` subfolders if they do not exist.
-4. Save or copy the workbook into `Programs/`.
-5. Preserve the generated workspace copy unless the trainer explicitly asks to move it.
+4. Upload or copy the workbook into `Programs/`.
+5. Preserve the generated workspace copy unless the trainer explicitly asks to move or delete it.
 
 ## Access And Permission Rules
 
-If macOS, OneDrive, or sandbox permissions prevent access to the folder:
+If Google Drive access is unavailable, expired, disconnected, or missing required permissions:
 
-- State that the path could not be accessed.
-- Ask the trainer to confirm the folder path or grant access.
-- Do not silently save files somewhere else.
-- Do not create a duplicate cloud workflow without explicit trainer approval.
+- State that Google Drive access is unavailable.
+- Ask the trainer to enable or reconnect Google Drive access.
+- Do not save files to an alternate location unless the trainer explicitly approves.
+
+If a file with the same name already exists:
+
+- Do not overwrite it silently.
+- Ask whether to replace it, keep both, or create a versioned file name.
 
 ## Privacy Rules
 
@@ -110,7 +116,7 @@ Client folders and files may contain private client information.
 
 Use only the client folder naming convention above unless instructed otherwise.
 
-Do not upload, share, rename, delete, or move client files outside the OneDrive Training Pal folder unless the trainer explicitly asks.
+Do not share, publish, rename, delete, or move client files outside the Google Drive `Program pal` folder unless the trainer explicitly asks.
 
 ## Handoff
 
