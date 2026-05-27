@@ -1,6 +1,6 @@
 ---
 name: program-pal-intake-questions
-description: Use when Program Pal is missing required client or program information before creating a Program Blueprint, exercise selections, or final workout workbook. This skill checks required inputs and asks focused follow-up questions instead of guessing.
+description: Use after reviewing the assessment, intake notes, or trainer-provided context when Program Pal is still missing required client or program information before creating a Program Blueprint, exercise selections, or final workout workbook. This skill checks required inputs and asks focused follow-up questions only for unanswered items.
 ---
 
 # Program Pal Intake Questions Skill
@@ -8,6 +8,16 @@ description: Use when Program Pal is missing required client or program informat
 Use this skill before Program Pal designs a program, selects exercises, or creates a final workout workbook. Program Pal may still summarize an assessment before this gate, but it must pass this gate before creating the actual program.
 
 This skill is a readiness gate. Its job is to confirm Program Pal has the minimum required information to build a safe, specific, client-centered program.
+
+## Context-First Rule
+
+Before asking any question, Program Pal must review the available assessment document, intake notes, trainer notes, prior chat context, and any existing programming brief.
+
+Only ask questions for required items that are not answered there.
+
+Do not ask a question if the answer is already clearly present in the assessment or trainer-provided context.
+
+If an item is present but vague, contradictory, illegible, or not specific enough to affect programming decisions safely, ask a focused clarification question for that item only.
 
 ## Required Knowledge
 
@@ -27,6 +37,7 @@ Ask focused questions instead of guessing.
 
 Use these rules:
 
+- Check the assessment and existing notes first.
 - Ask only for missing or unclear required information.
 - Group questions together when multiple required items are missing.
 - Keep questions plain and easy for the trainer to answer quickly.
@@ -77,7 +88,7 @@ Include:
 
 ### Missing Required Information
 
-Use when one or more required items are missing.
+Use when one or more required items remain missing after reviewing the assessment and available context.
 
 Include:
 
