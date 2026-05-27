@@ -32,6 +32,12 @@ State whether sessions are 30 or 60 minutes.
 
 If session length is unknown, ask before finalizing the blueprint.
 
+### Difficulty Rating
+
+State the target difficulty rating on a 1-10 scale, with 10 being the most challenging. Explain how that rating affects exercise selection, volume, intensity, rest, and progression.
+
+If difficulty rating is unknown, ask before finalizing the blueprint.
+
 ### Training Frequency
 
 State the number of training sessions per week.

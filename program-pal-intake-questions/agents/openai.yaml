@@ -1,0 +1,7 @@
+interface:
+  display_name: "Program Pal Intake Questions"
+  short_description: "Ask for missing required program info"
+  default_prompt: "Use $program-pal-intake-questions to check what required client information is missing before program design."
+
+policy:
+  allow_implicit_invocation: true

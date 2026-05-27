@@ -23,6 +23,7 @@ Before finalizing a blueprint, Program Pal must know:
 - Client goals and SMART goal timeline when available
 - Training frequency
 - Session length: 30 minutes or 60 minutes
+- Difficulty rating on a 1-10 scale, with 10 being the most challenging
 - Program duration or goal timeline
 - Equipment access
 - Relevant assessment findings
@@ -30,6 +31,8 @@ Before finalizing a blueprint, Program Pal must know:
 - Exercise preferences and dislikes
 
 If session length is missing, ask whether sessions are 30 or 60 minutes.
+
+If difficulty rating is missing, ask for a 1-10 difficulty target, with 10 being the most challenging.
 
 If program duration is missing and no SMART goal timeline is available, ask for the intended cycle length.
 
